@@ -11,7 +11,6 @@ import 'package:univibe/pages/route_page.dart' as route;
 import 'package:univibe/pages/settings.dart';
 import 'package:univibe/pages/hotspot_page.dart';
 import 'package:univibe/pages/f-mate.dart';
-import 'package:univibe/pages/posts_page.dart';
 import 'package:univibe/pages/my_posts.dart' as my;
 import 'package:univibe/pages/post_detail_page.dart';
 import 'package:univibe/pages/create_post.dart';
@@ -42,13 +41,12 @@ class MyApp extends StatelessWidget {
         '/garden': (context) => GardenPage(),
         '/log': (context) => LogPage(),
         '/me': (context) => const MePage(),
-        '/route_expolerer': (context) =>
-            route.RoutePage(userId: global.userId!),
-        '/hotspot': (context) => const HotspotPage(),
+        '/route_expolerer': (context) => route.RoutePage(userId: global.userId),
+        '/hotspot': (context) => const NUSMapPage(),
         '/f-mate': (context) => const ConnectionPage(),
         '/settings': (context) => SettingsPage(),
         '/myposts': (context) => const my.MyPostsPage(),
-        '/create_post': (context) => const CreatePostPage(),
+        '/create_post': (context) => CreatePostPage(),
       },
       onGenerateRoute: (settings) {
         if (settings.name == '/fit_hub_detail') {
